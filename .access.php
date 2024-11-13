@@ -1,4 +1,10 @@
 <?
+$PERM["lichnyy-kabinet-pokupatelya"]["*"]="D";
+$PERM["lichnyy-kabinet-pokupatelya"]["G7"]="R";
+$PERM["lichnyy-kabinet-pokupatelya"]["G1"]="X";
+$PERM["lichnyy-kabinet-prodavtsa"]["*"]="D";
+$PERM["lichnyy-kabinet-prodavtsa"]["G8"]="R";
+$PERM["lichnyy-kabinet-prodavtsa"]["G1"]="X";
 $PERM["search"]["6"]="W";
 $PERM["products"]["6"]="W";
 $PERM["services"]["6"]="W";

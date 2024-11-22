@@ -34,41 +34,6 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"CSite::InGroup(array(1,7))" 
-	),
-	Array(
-		"Компания", 
-		"company/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Новости", 
-		"news/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Продукция", 
-		"products/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Услуги", 
-		"services/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Контакты", 
-		"contacts/", 
-		Array(), 
-		Array(), 
-		"" 
 	)
 );
 ?>

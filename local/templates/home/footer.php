@@ -18,24 +18,28 @@ IncludeTemplateLangFile(__FILE__);
           );?>
         </div>
         <div class="col-lg-4 mb-5 mb-lg-0">
-          <?$APPLICATION->IncludeComponent("bitrix:menu", "bottom_multi", Array(
-            "ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
-              "MAX_LEVEL" => "3",	// Уровень вложенности меню
-              "CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
-              "USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
-              "MENU_CACHE_TYPE" => "A",	// Тип кеширования
-              "MENU_CACHE_TIME" => "36000000",	// Время кеширования (сек.)
-              "MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
-              "MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
-              "COMPONENT_TEMPLATE" => "horizontal_multilevel",
-              "DELAY" => "N",	// Откладывать выполнение шаблона меню
-              "ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
-            ),
-            false,
-            array(
-            "ACTIVE_COMPONENT" => "Y"
-            )
-          );?>
+          <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"bottom_multi", 
+	array(
+		"ROOT_MENU_TYPE" => "top",
+		"MAX_LEVEL" => "3",
+		"CHILD_MENU_TYPE" => "left",
+		"USE_EXT" => "N",
+		"MENU_CACHE_TYPE" => "A",
+		"MENU_CACHE_TIME" => "36000000",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"COMPONENT_TEMPLATE" => "bottom_multi",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "N"
+	),
+	false,
+	array(
+		"ACTIVE_COMPONENT" => "Y"
+	)
+);?>
         </div>
 
         <div class="col-lg-4 mb-5 mb-lg-0">

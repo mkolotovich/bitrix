@@ -368,12 +368,14 @@ IncludeTemplateLangFile(__FILE__);
     </div>
   <?else:?>
     <?$APPLICATION->IncludeComponent(
-      "bitrix:breadcrumb",
-      "nav",
-      Array(
-        "PATH" => "",
-        "SITE_ID" => "s1",
-        "START_FROM" => "0"
-      )
-    );?>
+	"bitrix:breadcrumb", 
+	"nav", 
+	array(
+		"PATH" => "",
+		"SITE_ID" => "s1",
+		"START_FROM" => "0",
+		"COMPONENT_TEMPLATE" => "nav"
+	),
+	false
+);?>
   <? endif; ?>

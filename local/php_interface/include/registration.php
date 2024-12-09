@@ -2,7 +2,7 @@
 AddEventHandler("main", "OnBeforeUserRegister", Array("MyClass", "BeforeRegistration"));
 class MyClass
 {
-	function BeforeRegistration(&$arFields)
+	public static function BeforeRegistration(&$arFields)
 	{
 		if($arFields["UF_USER_TYPE"] == 10)
 		{

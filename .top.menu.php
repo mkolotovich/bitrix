@@ -41,6 +41,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"Выйти", 
+		"/?logout=yes&".bitrix_sessid_get(),
+		Array(), 
+		Array(),
+		"\$USER->IsAuthorized()"
 	)
 );
 ?>

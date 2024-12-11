@@ -180,6 +180,9 @@ class AgentsList extends CBitrixComponent implements Controllerable, Errorable
          */ 
         //  $this->arResult['STAR_AGENTS'] = CUserOptions::GetOption($category, $name);
          $this->arResult['STAR_AGENTS'] = CUserOptions::GetOption('mcart_agent', 'options_agents_star');
+         if (!is_array($this->arResult['STAR_AGENTS'])) {
+            $this->arResult['STAR_AGENTS'] = [];
+         }
         /*
          * Данного метода нет в документации, код метода и его параметры можно найти в ядре (/bitrix/modules/main/) или в гугле
          * $category - это категория настройки, можете придумать любую, например mcart_agent

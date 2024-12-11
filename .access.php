@@ -1,4 +1,5 @@
 <?
+$PERM["desktop_app"]["*"]="D";
 $PERM["urlrewrite.php"]["9"]="W";
 $PERM["storage.php"]["9"]="W";
 $PERM["index.php"]["9"]="W";
@@ -23,7 +24,6 @@ $PERM["news"]["6"]="W";
 $PERM["login"]["9"]="W";
 $PERM["include"]["9"]="W";
 $PERM["images"]["9"]="W";
-$PERM["desktop_app"]["9"]="W";
 $PERM["contacts"]["9"]="W";
 $PERM["contacts"]["6"]="W";
 $PERM["company"]["9"]="W";

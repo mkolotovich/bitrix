@@ -36,7 +36,11 @@ function clickStar(event) {
                     let data = response.data;
                     if (data['action'] == 'success') {
                         // Отобразить пользоватиелю, что агент добавлен в избраное (желтая звездочка, есть в верстке)
-                        event.target.parentNode.classList.add('active');
+                        if (event.target.tagName === 'svg') {
+                            event.target.parentNode.classList.toggle('active');
+                        } else {
+                            event.target.parentNode.parentNode.classList.toggle('active');
+                        }
                     }
 
                 }, this)

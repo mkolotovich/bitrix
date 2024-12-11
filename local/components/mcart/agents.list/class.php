@@ -21,6 +21,8 @@ use \Bitrix\Main\Engine\ActionFilter;
 use Bitrix\Highloadblock as HL,
 	Bitrix\Main\Entity;
 
+use Bitrix\Main\Diag;
+    
 class AgentsList extends CBitrixComponent implements Controllerable, Errorable
 {
     protected ErrorCollection $errorCollection;
@@ -378,22 +380,22 @@ class AgentsList extends CBitrixComponent implements Controllerable, Errorable
          * (его нет в документации, код метода и его параметры можно найти в ядре (/bitrix/modules/main/) или в гугле
          * 5. Отправить на фронт в массиве $result в ключе 'action' значение 'success', если все прошло удачно
          */
-        $hl_block_id = 2;
-        $userOption = CUserOptions::GetOption("form", "form_element_".$hl_block_id);
+        $userOption = CUserOptions::GetOption('mcart_agent', 'options_agents_star');
         if ($userOption) {
             if (!is_array($userOption)) {
                 $userOption = [];
             }
-            if (array_key_exists($agentID, $userOption)) {
-                unset($userOption[$agentID]);
+            if (in_array($agentID, $userOption)) {
+                $index = array_search($agentID, $userOption);
+                unset($userOption[$index]);
             } else {
-                $userOption[$agentID] = $agentID;
+                $userOption[] = $agentID;
             }
             $value = $userOption;
         } else {
-            $value = $agentID;
+            $value[] = $agentID;
         }
-        if (CUserOptions::SetOption("form", "form_element_".$hl_block_id, array($agentID => $value))) {
+        if (CUserOptions::SetOption("mcart_agent", "options_agents_star", $value)) {
             $result['action'] = 'success';
         }
         return $result;

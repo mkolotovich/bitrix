@@ -36,13 +36,6 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Партнерам", 
-		"/s2/partneram/", 
-		Array(), 
-		Array("TEXT"=>"Партнерам – текст для пункта"), 
-		"" 
-	),
-	Array(
 		"Услуги", 
 		"services/", 
 		Array(), 
@@ -61,6 +54,13 @@ $aMenuLinks = Array(
 		"/search/", 
 		Array(), 
 		Array(), 
+		"" 
+	),
+	Array(
+		"Партнерам", 
+		"/s2/partneram/", 
+		Array(), 
+		Array("TEXT"=>"Партнерам – текст для пункта"), 
 		"" 
 	)
 );

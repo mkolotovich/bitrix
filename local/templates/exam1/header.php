@@ -97,13 +97,15 @@ IncludeTemplateLangFile(__FILE__);
         </nav>
         <!-- /nav -->
         <? if ($APPLICATION->GetCurPage(false) !== '/s2/'): ?>
-            <div class="breadcrumbs-box">
-                <div class="inner-wrap">
-                    <a href="">Главная</a>
-                    <a href="">Мебель</a>
-                    <span>Выставки и события</span>
-                </div>
-            </div>
+            <?$APPLICATION->IncludeComponent(
+                "bitrix:breadcrumb",
+                "nav",
+                Array(
+                    "PATH" => "",
+                    "SITE_ID" => "s2",
+                    "START_FROM" => "0"
+                )
+            );?>
         <? endif; ?>
         <!-- page -->
         <div class="page">

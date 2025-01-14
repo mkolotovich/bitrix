@@ -24,6 +24,30 @@ $arUrlRewrite=array (
     'PATH' => '/o-servise/novosti/index.php',
     'SORT' => 100,
   ),
+  24 => 
+  array (
+    'CONDITION' => '#^/site_pb/services/#',
+    'RULE' => '',
+    'ID' => 'bitrix:catalog',
+    'PATH' => '/site_pb/services/index.php',
+    'SORT' => 100,
+  ),
+  25 => 
+  array (
+    'CONDITION' => '#^/site_pb/products/#',
+    'RULE' => '',
+    'ID' => 'bitrix:catalog',
+    'PATH' => '/site_pb/products/index.php',
+    'SORT' => 100,
+  ),
+  26 => 
+  array (
+    'CONDITION' => '#^/site_pb/news/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/site_pb/news/index.php',
+    'SORT' => 100,
+  ),
   18 => 
   array (
     'CONDITION' => '#^/obyavleniya/#',
